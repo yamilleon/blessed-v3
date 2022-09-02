@@ -1,0 +1,23 @@
+nav {
+    background-color: #8b2525a6;
+    padding: 10px 30px;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    opacity: 1;
+    font-size: 1.9rem;
+
+}
+
+nav div ul{color: white;
+}
+
+nav div ul li {font-family: fantasy;
+    font-size: 1.9rem;
+
+}
+.color{color: #8b2525a6;
+}
+
+.color2{background-color:  #8b2525a6;
+}
