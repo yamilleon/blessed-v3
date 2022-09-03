@@ -1,6 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './Navbar.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
+import { CardWidget } from './CardWidget';
+import logo from './logo.svg';
+
 
 
 
@@ -8,10 +11,9 @@ import 'bootstrap/dist/js/bootstrap.bundle';
   return (
     <div id="encabezado">
     <nav className="navbar navbar-expand-lg navbar-light">
-      <div className="container-fluid">
+      <div className="logo container-fluid">
         <a className="navbar-brand" href="index.html"
-          ><img src="src\img\logo.webp"  alt="Logo Blessed"
-        /></a>
+          /> <img src={logo} className="Logo2" alt="logo" />
         <button
           className="navbar-toggler"
           type="button"
@@ -61,11 +63,12 @@ import 'bootstrap/dist/js/bootstrap.bundle';
                   <a className="dropdown-item" href="unisex.html">Unisex</a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="ninos.html">Peques</a>
+                  <a className="dropdown-item" href="ninos.html">ninos</a>
                 </li>
               </ul>
             </li>
           </ul>
+          <span><CardWidget/></span>
         </div>
       </div>
     </nav>
