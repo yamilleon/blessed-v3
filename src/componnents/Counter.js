@@ -22,12 +22,12 @@ import './counter.css';
 
 
   return (
-    <a className="counterSpaint">
+    <div className="counterSpaint" >
       <button onClick={()=> sumar()}> + </button>
       <span>{contador}</span>
       <button onClick={()=> restar()}> - </button>
       <button onClick={()=> pintarEnCarrito()}> Agregar Al Carrito </button>
-    </a>
+    </div>
   )
 }
 

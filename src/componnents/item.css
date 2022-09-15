@@ -1,0 +1,4 @@
+div .flexItem {
+    display: flex;
+    flex-wrap: wrap;
+}

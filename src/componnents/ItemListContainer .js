@@ -1,14 +1,25 @@
-
+import { useState, useEffect } from "react";
+import Articles from "./Articles";
+import { customFetch } from "./customFetch";
+import ItemList from "./ItemList";
 
 
  export const ItemListContainer = ({
   cambios,
 }) => {
+
+  const [ListArticles, setListArticles] = useState ([])
+
+  useEffect(() => {
+    customFetch(Articles)
+    .then(data=> setListArticles(data))
+  
+  },[])
+  
+  console.log(ListArticles)
   return (
-    <div>
-      <h1>ItemListContainer</h1>
-      <h2>{cambios}</h2>
-      
+    <div className="d-flex justify-content-center flex-wrap mb-3">
+     <ItemList ListArticles={ListArticles}/>
     </div>
   );
 };
