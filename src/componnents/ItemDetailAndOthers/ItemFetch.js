@@ -1,7 +1,7 @@
-function ItemFetch(tempo, homework) {
+function ItemFetch(tempo, work) {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(homework);
+            resolve(work);
         }, tempo);
     })
 }

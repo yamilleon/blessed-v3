@@ -1,0 +1,17 @@
+button .boton{
+    width: 250px;
+    height: 80px;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;    
+    color: white;
+    border:  2px solid white;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover .boton {
+    background-color: #000000;
+    text-decoration: none;
+    color: white
+}

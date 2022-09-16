@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./ItemDetail.css"
 const ItemDetail = ({ListDetail})=>{
   return ( 
      <div>
