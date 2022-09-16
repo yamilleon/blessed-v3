@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Articles from "./Articles";
 import { customFetch } from "./customFetch";
 import ItemList from "./ItemList";
+import "./counter.css"
 
 
  export const ItemListContainer = ({
@@ -18,7 +19,7 @@ import ItemList from "./ItemList";
   
   console.log(ListArticles)
   return (
-    <div className="d-flex justify-content-center flex-wrap mb-3">
+    <div className= " d-flex justify-content-center flex-wrap mb-3">
      <ItemList ListArticles={ListArticles}/>
     </div>
   );
