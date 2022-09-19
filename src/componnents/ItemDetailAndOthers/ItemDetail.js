@@ -3,7 +3,7 @@ import "./ItemDetail.css"
 const ItemDetail = ({ListDetail})=>{
   return ( 
      <div>
-          <div className="card" id={ListDetail.id}>
+          <div className="card">
             <div>
               <img
                 src={ListDetail.img}

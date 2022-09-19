@@ -3,15 +3,18 @@ import "./Navbar.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import { CardWidget } from "./CardWidget";
 import logo from "./logo.svg";
+import { Link } from "react-router-dom";
+
 
 export function Navbar(){
   return (
     <div id="encabezado">
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="logo container-fluid">
-          <a className="navbar-brand" href="0"
-           />
+          <Link className="navbar-brand" to='/'
+           >
           <img src={logo} className="Logo2" alt="logo" />
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -26,58 +29,58 @@ export function Navbar(){
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link active"
                   aria-current="page"
-                  href="index.html"
+                  to='/'
                 >
                   Inicio
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="ubicacion.html">
+                <Link className="nav-link" to='/ubicacion'>
                   Ubicacion
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="contacto.html">
+                <Link className="nav-link" to='/contacto' >
                   Contacto
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
-                <a
+                <Link
                   className="color nav-link dropdown-toggle"
-                  href="0"
+                  to='/categorias'
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Categorias
-                </a>
+                </Link>
                 <ul
                   className="color2 dropdown-menu"
                   aria-labelledby="  navbarDropdown"
                 >
                   <li>
-                    <a className="dropdown-item" href="hombres.html">
+                    <Link className="dropdown-item" to='category/1'>
                       Hombres
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="mujeres.html">
+                    <Link className="dropdown-item" to='category/2'>
                       Mujeres
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="unisex.html">
+                    <Link className="dropdown-item" to='category/3'>
                       Unisex
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="ninos.html">
-                      ninos
-                    </a>
+                    <Link className="dropdown-item" to='category/4'>
+                      Peques
+                    </Link>
                   </li>
                 </ul>
               </li>
