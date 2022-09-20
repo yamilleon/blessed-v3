@@ -1,28 +1,40 @@
-import React from 'react';
-import "./ItemDetail.css"
-const ItemDetail = ({ListDetail})=>{
-  return ( 
-     <div>
-          <div className="card">
-            <div>
-              <img
-                src={ListDetail.img}
-                className="card-img-top"
-                alt={ListDetail.nombre}
-              />
-            </div>
-            <div className="card-body">
-              <h5 className="card-title">{ListDetail.nombre}</h5>
-              <p className="card-text">precio: ${ListDetail.precio}</p>
-              <button type="button" className="btn btn-primary">
-                Agregar producto
-              </button>
-            </div>
-          </div>
+import React from "react";
+import "./ItemDetail.css";
+import { Counter } from "../Counter";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+const ItemDetail = ({ ListDetail }) => {
+  const [goToCart, setgoToCart] = useState(0);
+  const onAdd = (quantify) => {
+    alert("Escogiste " + quantify + " Productos y se sumaron a tu Carrito" )
+    setgoToCart(quantify);
+  };
+  return (
+    <div>
+      <div className="card">
+        <div>
+          <img
+            src={ListDetail.img}
+            className="card-img-top"
+            alt={ListDetail.nombre}
+          />
         </div>
-        
-      )
-    }
-    
-    export default ItemDetail;
-    
+        <div className="card-body">
+          <h5 className="card-title">{ListDetail.nombre}</h5>
+          <p className="card-text">Detalles:{ListDetail.detail}</p>
+          <p className="card-text">precio: ${ListDetail.precio}</p>
+          { 
+          goToCart 
+           === 0
+          ?<Counter stock={ListDetail.stock} inicial={goToCart}  onAdd={onAdd} />: 
+          <Link to='/Cart'><button>Checkout</button></Link>
+
+          }
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ItemDetail;
