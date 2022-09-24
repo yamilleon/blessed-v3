@@ -3,7 +3,7 @@ button{
     height: 80px;
     font-family: Roboto, sans-serif;
     font-weight: bold;    
-    color: white;
+    color: gray;
     border:  2px solid white;
     border-radius: 5px;
     margin: 5px;
