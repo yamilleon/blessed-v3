@@ -5,13 +5,13 @@ import { ItemListContainer } from "./componnents/ItemListOthers/ItemListContaine
 import { ItemDetailContainer as IDC } from "./componnents/ItemDetailAndOthers/ItemDetailContainer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./componnents/Cart";
-import CartContextProvider from "./componnents/CartContext";
+import CartProvider from "./Context/CartContext";
 
 
 function App() {
   return (
     <>
-    <CartContextProvider>
+			<CartProvider>
       <Router>
         <Navbar />
         <Routes>
@@ -28,7 +28,7 @@ function App() {
           <Route path="item/:id" element={<IDC cambios={"Hola mundo"} />} />
         </Routes>
       </Router>
-      </CartContextProvider>
+			</CartProvider>
     </>
   );
 }

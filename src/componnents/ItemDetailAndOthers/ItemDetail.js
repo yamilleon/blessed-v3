@@ -3,20 +3,18 @@ import "./ItemDetail.css";
 import { Counter } from "../Counter";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import  { useContext } from 'react';
-import { CartContext } from '../CartContext';
+import { useCartContext } from "../../Context/CartContext";
 
 
 
 const ItemDetail = ({ ListDetail }) => {
   const [goToCart, setgoToCart] = useState(0);
 
-  const ctx = useContext(CartContext);
-
+  const { addProduct } = useCartContext();
   const onAdd = (quantify) => {
     alert("Escogiste " + quantify + " Productos y se sumaron a tu Carrito" );
     setgoToCart(quantify);
-    ctx.addItem(ListDetail, quantify);
+    addProduct(ListDetail, quantify);
   };
 
 
