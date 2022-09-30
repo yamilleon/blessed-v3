@@ -14,9 +14,9 @@ export const ItemListContainer = ({ cambios }) => {
       setTimeout(() => {
         if (categoria) {
           resolve(
-            Articles.filter((ListArticles) => ListArticles.categoria == categoria)
+            articles.filter((ListArticles) => ListArticles.categoria == categoria)
           );
-        } else resolve(Articles);
+        } else resolve(articles);
       }, 2000);
     });
   };

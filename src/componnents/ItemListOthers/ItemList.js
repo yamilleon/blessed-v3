@@ -4,8 +4,8 @@ import Item from "./Item";
 const ItemList = ({ ListArticles }) => {
   return (
     <>
-      {ListArticles.map((aarticles) => (
-      <Item articles={aarticles} key={aarticles.id} /> 
+      {ListArticles.map((articles) => (
+      <Item articles={articles} key={articles.id} /> 
       ))}
     </>
   );

@@ -8,6 +8,9 @@ import './Cart.css'
 const Cart = () => {
   
   const { cart, totalPrice, clearCart } = useCartContext();
+  const createOrder = () => {
+	console.log('createOrder')
+  };
 
   
   if (cart.length === 0) {
@@ -20,13 +23,13 @@ const Cart = () => {
 	}
 
 	return (
-		<>
+		<>       <button onClick={clearCart}>Delete Everything</button>
+
 			{cart.map((product) => (
 				<ItemCart key={product.id} product={product} />
 			))}
 			<p>total: {totalPrice()}</p>
-      <button onClick={clearCart}>Delete Everything</button>
-
+<button onClick={createOrder} >Compra Ya</button>
 		</>
 
 	);
