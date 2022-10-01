@@ -3,13 +3,49 @@ import { useCartContext } from '../Context/CartContext'
 import ItemCart from './ItemCart';
 import { Link } from "react-router-dom";
 import './Cart.css'
+import { serverTimestamp, doc, setDoc, collection, increment, updateDoc } from 'firebase/firestore';
+import db from '../utils/firebaseConfig'
+
+
 
 
 const Cart = () => {
   
   const { cart, totalPrice, clearCart } = useCartContext();
-  const createOrder = () => {
-	console.log('createOrder')
+
+
+
+  const createOrder = async () => {
+
+	//const leerCart = cart.foreach()
+	const itemsforDb = cart.map(item => ({
+		id: item.id, 
+		title: item.nombre, 
+		price: item.precio, 
+		quantity: item.quantity
+	})	)
+	let order = {
+		buyer:{
+		name: 'Panchito',
+		email: 'Marypanchitos@gmail.com',
+		cel:'1234567891',
+		addres:'Haxia hil 1234'
+        },
+		items:itemsforDb,
+		date: serverTimestamp(),
+		total:totalPrice()
+	}
+	const newOrderRef = doc(collection(db,"orders") )
+	await setDoc(newOrderRef,order );
+	  cart.forEach([]) ( async (item) => {
+		const itemRef = doc(db, "articles", item.id);
+		await updateDoc(itemRef, {
+		  stock: increment(-item.quantity )
+		});})
+	clearCart()
+
+	alert('se creo tu orden de compra tu id es :'+ newOrderRef.id )
+	
   };
 
   
