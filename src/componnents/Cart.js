@@ -37,7 +37,9 @@ const Cart = () => {
 	}
 	const newOrderRef = doc(collection(db,"orders") )
 	await setDoc(newOrderRef,order );
-	  cart.forEach([]) ( async (item) => {
+	//error en el for each el profe pone test.cartlist.foreach pero yo saque el cart asi que me queda en
+	// cart.foreach lo cual me suelta error ya que no es una funcion
+	  cart.foreach ( async (item) => {
 		const itemRef = doc(db, "articles", item.id);
 		await updateDoc(itemRef, {
 		  stock: increment(-item.quantity )
