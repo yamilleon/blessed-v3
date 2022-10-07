@@ -17,7 +17,6 @@ const Cart = () => {
   const { cart, totalPrice, clearCart } = useCartContext();
 
   const createOrder = async () => {
-    //const leerCart = cart.foreach()
     const itemsforDb = cart.map((item) => ({
       id: item.id,
       title: item.nombre,
@@ -37,8 +36,6 @@ const Cart = () => {
     };
     const newOrderRef = doc(collection(db, "orders"));
     await setDoc(newOrderRef, order);
-    //error en el for each el profe pone test.cartlist.foreach pero yo saque el cart asi que me queda en
-    // cart.foreach lo cual me suelta error ya que no es una funcion
     itemsforDb.forEach(async (item) => {
       const itemRef = doc(db, "articles", item.id);
       await updateDoc(itemRef, {
@@ -60,15 +57,17 @@ const Cart = () => {
   }
 
   return (
-    <>
+    <div className="d-flex flex-xl-column
+    flex-wrap mb-3">
       {" "}
       <button onClick={clearCart}>Delete Everything</button>
+    
       {cart.map((product) => (
         <ItemCart key={product.id} product={product} />
       ))}
-      <p>total: {totalPrice()}</p>
+      <p className="toTal card-text" >total: {totalPrice()}</p>
       <button onClick={() => createOrder()}>Compra Ya</button>
-    </>
+    </div>
   );
 };
 

@@ -1,15 +1,14 @@
 div .Carta {
-    background-color: gray;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
 }
 img{
-    width: 50%;
+    width: 60%;
     opacity: 0,9;
     }
 
-p .morti {
+div p .toTal {
     color: crimson;
 }

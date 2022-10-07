@@ -9,6 +9,8 @@ import {
 	query,
 	where,
 } from "firebase/firestore";
+import { Carrousel } from "../Carrousel";
+import "bootstrap/dist/css/bootstrap.css";
 
 
 
@@ -38,9 +40,13 @@ import {
       }
     }, [categoria]);
   
-  return (
-    <div className=" d-flex justify-content-center flex-wrap mb-3">
+  return (<div>
+    <div><Carrousel/></div>
+    <div className=" d-flex justify-content-around
+ flex-wrap mb-3">
+            
       <ItemList ListArticles={data} />
+    </div>
     </div>
   );
 };
