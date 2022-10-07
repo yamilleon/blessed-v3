@@ -8,27 +8,21 @@ import Cart from "./componnents/Cart";
 import CartProvider from "./Context/CartContext";
 
 
+
 function App() {
   return (
     <>
-			<CartProvider>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route
-            exact
-            path="/"
-            element={<ItemListContainer cambios={"Hola mundo"} />}
-          />
-          <Route
-            path="category/:categoria"
-            element={<ItemListContainer cambios={"Hola mundo"} />}
-          />
-          <Route path="/Cart" element={<Cart />} />
-          <Route path="item/:id" element={<IDC cambios={"Hola mundo"} />} />
-        </Routes>
-      </Router>
-			</CartProvider>
+      <CartProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route exact path="/" element={<ItemListContainer  />}/>
+            <Route path="category/:categoria" element={<ItemListContainer />} />
+            <Route path="/Cart" element={<Cart />} />
+            <Route path="item/:id" element={<IDC />} />
+          </Routes>
+        </Router>
+      </CartProvider>
     </>
   );
 }
