@@ -1,5 +1,5 @@
 import React from "react";
-import { useCartContext } from "../Context/CartContext";
+import { useCartContext } from "../../Context/CartContext";
 import ItemCart from "./ItemCart";
 import { Link } from "react-router-dom";
 import "./Cart.css";
@@ -11,7 +11,7 @@ import {
   increment,
   updateDoc,
 } from "firebase/firestore";
-import db from "../utils/firebaseConfig";
+import db from "../../utils/firebaseConfig";
 
 const Cart = () => {
   const { cart, totalPrice, clearCart } = useCartContext();
@@ -50,14 +50,16 @@ const Cart = () => {
   if (cart.length === 0) {
     return (
       <>
-        <p>No hay nada en el carrito :c</p>
-        <Link to="/">Ir a comprar</Link>
+      <div className="noHay">
+        <p >No hay nada en el carrito  😔</p>
+        <Link className="boTon" to="/">Ir a comprar 😀😀😀</Link>
+        </div>
       </>
     );
   }
 
   return (
-    <div className="d-flex flex-xl-column
+    <div className="alineamienTo d-flex flex-xl-column
     flex-wrap mb-3">
       {" "}
       <button onClick={clearCart}>Delete Everything</button>
@@ -65,7 +67,8 @@ const Cart = () => {
       {cart.map((product) => (
         <ItemCart key={product.id} product={product} />
       ))}
-      <p className="toTal card-text" >total: {totalPrice()}</p>
+      <div className="toTal">
+      <p className=" card-text" >total: {totalPrice()}</p></div>
       <button onClick={() => createOrder()}>Compra Ya</button>
     </div>
   );

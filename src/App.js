@@ -4,14 +4,14 @@ import { Navbar } from "./componnents/Navbar";
 import { ItemListContainer } from "./componnents/ItemListOthers/ItemListContainer ";
 import { ItemDetailContainer as IDC } from "./componnents/ItemDetailAndOthers/ItemDetailContainer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Cart from "./componnents/Cart";
 import CartProvider from "./Context/CartContext";
-
-
+import Cart from "./componnents/Cart/Cart"
+import {Footer} from "./componnents/Footer/Footer"
 
 function App() {
   return (
     <>
+    
       <CartProvider>
         <Router>
           <Navbar />
@@ -20,7 +20,10 @@ function App() {
             <Route path="category/:categoria" element={<ItemListContainer />} />
             <Route path="/Cart" element={<Cart />} />
             <Route path="item/:id" element={<IDC />} />
-          </Routes>
+           
+          </Routes> 
+         
+          <Footer />
         </Router>
       </CartProvider>
     </>
