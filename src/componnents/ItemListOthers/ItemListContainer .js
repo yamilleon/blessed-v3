@@ -42,7 +42,7 @@ import "bootstrap/dist/css/bootstrap.css";
   
   return (<div>
     <div><Carrousel/></div>
-    <div className=" d-flex justify-content-around
+    <div className="espaCio d-flex justify-content-around
  flex-wrap mb-3">
             
       <ItemList ListArticles={data} />

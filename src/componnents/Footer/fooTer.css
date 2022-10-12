@@ -1,0 +1,45 @@
+footer .pie {
+  padding: 30px;
+  font-family: fantasy;
+
+}
+
+h2 .pie__titulo--md {
+  text-align: center;
+  font-size: 10rem;
+  text-decoration: none;
+
+}
+h2 .pie__titulo--md a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.boton {
+  cursor: pointer;
+  border: 3px solid;
+  border-radius: 25px;
+  background-color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
+div .icon img {
+  width: 8%;
+
+}
+div .icon{
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+    display: -webkit-box;
+    font-size: 1.5rem;
+    
+    
+}
+
+h2{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}

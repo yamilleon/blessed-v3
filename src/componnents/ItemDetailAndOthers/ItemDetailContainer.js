@@ -19,7 +19,7 @@ export const ItemDetailContainer = ({ cambios }) => {
 
 
   return (
-    <div className="  d-flex justify-content-center flex-wrap mb-3">
+    <div className=" d-flex justify-content-center flex-wrap mb-3">
       <ItemDetail ListDetail={ListDetail} />
     </div>
   );

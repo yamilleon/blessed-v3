@@ -1,0 +1,58 @@
+div .Carta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+img{
+    width: 60%;
+    opacity: 0,9;
+    }
+
+
+div  .noHay p{
+    
+    font-size: 8rem;
+    color: black;
+    padding: 58px 3px;
+    margin: 143px 50px;
+    border: 2px solid white;
+    border-radius: 77px;
+    background-color: red;
+}
+
+div .noHay .boTon {
+    font-weight: bold;
+    color: black;
+    border: 2px solid white;
+    border-radius: 77px;
+    cursor: pointer;
+    font-size: 5rem;
+    padding: 1px 143px;
+    background-color: lawngreen;
+    text-decoration: none;
+    margin: 200px;
+}
+
+div .noHay{
+    display: grid;
+    justify-items: center;
+}
+
+div .alineamienTo
+{
+    align-content: space-around;
+    align-items: center;
+}
+
+div .toTal p{
+    
+    border: 2px solid white;
+    border-radius: 77px;
+    background-color: black;
+    color: white;
+    padding: 54px 146px;
+    font-size: 2.1rem;
+    margin: 40px;
+
+}
