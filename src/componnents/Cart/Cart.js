@@ -50,25 +50,29 @@ const Cart = () => {
   if (cart.length === 0) {
     return (
       <>
-      <div className="noHay">
-        <p >No hay nada en el carrito  😔</p>
-        <Link className="boTon" to="/">Ir a comprar 😀😀😀</Link>
+        <div className="noHay">
+          <p>No hay nada en el carrito 😔</p>
+          <Link className="boTon" to="/">
+            Ir a comprar 😀😀😀
+          </Link>
         </div>
       </>
     );
   }
 
   return (
-    <div className="alineamienTo d-flex flex-xl-column
-    flex-wrap mb-3">
+    <div
+      className="alineamienTo d-flex flex-xl-column
+    flex-wrap mb-3"
+    >
       {" "}
       <button onClick={clearCart}>Delete Everything</button>
-    
       {cart.map((product) => (
         <ItemCart key={product.id} product={product} />
       ))}
       <div className="toTal">
-      <p className=" card-text" >total: {totalPrice()}</p></div>
+        <p className=" card-text">total: {totalPrice()}</p>
+      </div>
       <button onClick={() => createOrder()}>Compra Ya</button>
     </div>
   );

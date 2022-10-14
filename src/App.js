@@ -5,24 +5,22 @@ import { ItemListContainer } from "./componnents/ItemListOthers/ItemListContaine
 import { ItemDetailContainer as IDC } from "./componnents/ItemDetailAndOthers/ItemDetailContainer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CartProvider from "./componnents/Context/CartContext";
-import Cart from "./componnents/Cart/Cart"
-import {Footer} from "./componnents/Footer/Footer"
+import Cart from "./componnents/Cart/Cart";
+import { Footer } from "./componnents/Footer/Footer";
 
 function App() {
   return (
     <>
-    
       <CartProvider>
         <Router>
           <Navbar />
           <Routes>
-            <Route exact path="/" element={<ItemListContainer  />}/>
+            <Route exact path="/" element={<ItemListContainer />} />
             <Route path="category/:categoria" element={<ItemListContainer />} />
             <Route path="/Cart" element={<Cart />} />
             <Route path="item/:id" element={<IDC />} />
-           
-          </Routes> 
-         
+          </Routes>
+
           <Footer />
         </Router>
       </CartProvider>
