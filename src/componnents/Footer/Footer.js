@@ -32,7 +32,7 @@ export const Footer = () => {
       </Link>
       <div className="p-3">
             <ul className="mono-text">
-                <Link className="nav-link active" to='/'>Home</Link>
+                <Link className="nav-link active" to='/'>Inicio</Link>
                 <Link className="nav-link active" to='/Cart'>Shopping Cart</Link>
                 <hr/>
                 <Link className="nav-link active" to='/category/1'>Hombres</Link>
