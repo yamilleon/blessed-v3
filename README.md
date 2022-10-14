@@ -12,6 +12,9 @@ _Tiene algunas de las funcionalidades comunes como:_
 * Calculo de total en de los productos
 * Validacion con orden de compra almacenada en firebase
 
+# Preview
+![Image text](Pre.png)
+
 ## Start
 
 _Clonar repositorio:_
