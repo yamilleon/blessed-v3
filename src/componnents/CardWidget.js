@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import { FaShopify } from 'react-icons/fa';
-import { useCartContext } from "../Context/CartContext";
+import { useCartContext } from "./Context/CartContext";
 import { Link } from "react-router-dom";
 
 

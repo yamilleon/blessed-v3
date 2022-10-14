@@ -3,7 +3,7 @@ import "./ItemDetail.css";
 import { Counter } from "../Counter";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCartContext } from "../../Context/CartContext";
+import { useCartContext } from "../Context/CartContext";
 
 
 
